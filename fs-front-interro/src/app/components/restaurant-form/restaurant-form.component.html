@@ -1,0 +1,11 @@
+<form #form="ngForm" (ngSubmit)="add(form)">
+    <div>
+        Nom :
+        <input type="text" name="nom" #nom="ngModel" [(ngModel)]="nomInput" maxlength="90" required>
+    </div>
+    <div>
+        Adresse :
+        <input type="text" name="adresse" #adresse="ngModel" [(ngModel)]="adresseInput" maxlength="255" required>
+    </div>
+    <button type="submit">Ajouter le restaurant</button>
+</form>

@@ -1,0 +1,15 @@
+<form #form="ngForm" (ngSubmit)="add(form)">
+    <div>
+        Evaluateur :
+        <input type="text" name="evaluateur" #nom="ngModel" [(ngModel)]="evaluateurInput" minlenght="1" maxlength="20" required>
+    </div>
+    <div>
+        Commentaire :
+        <input type="text" name="commentaire" #adresse="ngModel" [(ngModel)]="commentaireInput" maxlength="255">
+    </div>
+    <div>
+        Nombre d'étoiles :
+        <input type="number" name="note" #adresse="ngModel" [(ngModel)]="noteInput" minvalue="0" maxvalue="3" required>
+    </div>
+    <button type="submit">Ajouter l'évaluation</button>
+</form>
